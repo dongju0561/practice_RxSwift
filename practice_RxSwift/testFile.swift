@@ -10,7 +10,7 @@ import RxSwift
 
 let hello = Observable.just("hello RX")
 let FBN = Observable.from([0,1,1,2,3,5,8])
-let dictS = Observable.from(1:"hello",2:"world")
+let dictS = Observable.from([1:"hello",2:"world"])
 
 
 //subscribe observable sequence

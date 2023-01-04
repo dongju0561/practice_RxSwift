@@ -1,37 +1,50 @@
 import UIKit
 import RxSwift
+//
+//let one = "1"
+//let two = "2"
+//let three = "3"
+//
+//let observable: Observable<String> = Observable<String>.just(one) // 해당 sequence는 Int타입의 이벤트가 생성될것이다.
+////Observable<Int>.just(one)을 통해서 one이라는 딱 하나의(just) 이벤트를 발생시킨다(emit).
+//let observable2 = Observable.of(one, two, three)
+//let observable3 = Observable.of([one,two,three])
+//let observable4 = Observable.from([one,two,three])
+//
+////observable만 생성한다고 이벤트를 발생시키지 않느다.
+////subscribe를 해주어야만 이벤트를 발생시키게 된다.
+//observable.subscribe{ event in
+//    //next에 감싸져 있는 event들을 옵셔널 바인딩을 통해 제거해준다.
+//    if let element = event.element{
+//        print(element)
+//    }
+//}
+////위에처럼 옵셔널 바인딩을 통해 next안에 있는 내용을 꺼져줄 수 있고 onNext 파라미터를 이용해 해당 클로저를 전달해주면 위와 같은 결과를 얻을 수 있다.
+//
+////subscribe에 오버로딩된 메소드들중 각각의 이벤트들마다 특정 동작들을 구체적을 정의해줄 수 있다.
+//observable2.subscribe(
+//    onNext: { event in
+//        print(event)
+//    },
+//    
+//    onCompleted: {
+//        print("completed")
+//    }
+//)
+//
+////empty: 이벤트 없을때
+//let observable5 = Observable<Void>.empty()
+////즉시 observable을 반환하고 싶을때 일부로 이벤트를 발생시키지 않는다.
+//
+////never observable
+//let observable6 = Observable<Any>.never()
 
+//range observable
+let observable7 = Observable<Int>.range(start: 1, count: 10)
 
-let subject = PublishSubject<String>()
-
-subject.onNext("Is anyone listening?") //emit
-
-let subscriptionOne = subject.subscribe(onNext: {string in // sequence 생성
-    print(string)
-})
-
-// sequence(subscriptionOne)에서 발생한것
-subject.on(.next("1"))//emit
-subject.onNext("2")//emit
-
-let subscriptionTwo = subject.subscribe({ (event) in //sequence 생성
-    print("2)",event.element ?? event)
-})
-// sequence(subscriptionOne)와 sequence(subscriptionTwo)에서 발생한것
-subject.onNext("3")
-
-subscriptionOne.dispose() // dispose와 complete의 차이는 무엇일까 어떤 상황에 구분지어서 사용을 하게 되는것일까??
-//dispose를 시켜주는 것은 아마 sequence의 작업 도중에 중단 시키고 싶을때 dispose를 사용하는것 같다.
-//complete를 발생하게 된다면 작업들의 중단과 complete라는 문자를 출력하게된다. !! 중단은 되지만 dispose가 되지 않은 상태이다.
-
-subject.onNext("4")
-subject.onCompleted()
-subscriptionTwo.dispose()
-
-let disposeBag = DisposeBag()
-
-subject.subscribe { // complete되어 끝난 sequence를 subscribe를 했다. => complete가 이미 되었기 때문에 complete를 반환한다.
-    print("3)",$0.element ?? $0) // $0의 의미는 클로저의 첫번째 인수를 의미한다. 해당 코드에서 예상되는 인수값은 completed이다.
+observable7.subscribe { i in
+    let n = Double(i)
+    let fibonacci = Int(((pow(1.61903, n)-pow(0.61803, n))/2.23606).rounded())
+    print(fibonacci)
 }
-.disposed(by: disposeBag)
-subject.onNext("?")
+
