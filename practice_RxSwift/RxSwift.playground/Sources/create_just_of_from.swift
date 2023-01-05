@@ -1,4 +1,8 @@
-import UIKit
+/*
+ create(), .just(), .of(), .from() 메소드들의 차이를 공부!
+ */
+
+import Foundation
 import RxSwift
 
 let oneItem = "event"

@@ -163,6 +163,4 @@ subject.subscribe{
 
 /*
  variable는 behavior subject와 똑같은 동작을 수행한다(발생한 시점 이전의 가장 최신의 이벤트만 전달)
- */
-
-
+ *

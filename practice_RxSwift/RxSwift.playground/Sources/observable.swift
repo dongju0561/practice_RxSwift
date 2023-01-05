@@ -1,3 +1,9 @@
+/*
+ observable은 "관찰할 수 있는"이라는 뜻이다. 이것을 유튜브로 비유하자면 결국 observable은 유튜버라고 할 수 있다.
+ 그리고 구독자(observer)들은 구독(subscribe)을 함으로서 유튜버의 영상을 볼 수 있게된다.
+ 이때 RxSwift상의 youtube는 무조건 구독을 해야만 영상을 볼 수 있게된다.. (현실세계에서 알고리즘을 통해 무작위 영상을 보는 시스템이 없다.)
+ 하나의 유튜버는 하나의 컨텐츠(Int, String, Double etc)만 영상을 만들 수 있다.
+ */
 import UIKit
 import RxSwift
 
@@ -39,7 +45,7 @@ let observable5 = Observable<Void>.empty()
 //never observable
 let observable6 = Observable<Any>.never()
 
-range observable
+//range observable
 let observable7 = Observable<Int>.range(start: 1, count: 10)
 
 observable7.subscribe { i in
