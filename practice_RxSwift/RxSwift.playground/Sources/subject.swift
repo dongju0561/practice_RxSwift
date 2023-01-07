@@ -159,7 +159,7 @@ subject.subscribe{
     print("2)", $0.element ?? $0)
 }
 .disposed(by: disposeBag)
-하지만 에러인한 영향이 버퍼에는 미치지 못하기 때문에 버퍼에는 이벤트가 남아있게 된다.
+//하지만 에러인한 영향이 버퍼에는 미치지 못하기 때문에 버퍼에는 이벤트가 남아있게 된다.
 
 /*
  variable는 behavior subject와 똑같은 동작을 수행한다(발생한 시점 이전의 가장 최신의 이벤트만 전달)

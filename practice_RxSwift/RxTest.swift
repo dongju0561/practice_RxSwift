@@ -33,7 +33,7 @@ class UIView: UIViewController {
             .subscribe({ result in
                 switch result {
                 case let .next(image):
-                    self.image.image = image
+                    self.image.image = image //image를 display
 
                 case let .error(err):
                     print(err.localizedDescription)
