@@ -44,6 +44,15 @@ class UIView: UIViewController {
             }
     }
     
+    @IBAction func pressSegue(_ sender: UIButton) {
+        guard let nextLearn = self.storyboard?.instantiateViewController(withIdentifier: "nextLearn")  else { return }
+                       // 화면 전환 애니메이션 설정
+               nextLearn.modalTransitionStyle = .coverVertical
+                       // 전환된 화면이 보여지는 방법 설정 (fullScreen)
+               nextLearn.modalPresentationStyle = .fullScreen
+                       self.present(nextLearn, animated: true, completion: nil)
+        
+    }
     @IBAction func cancelLoad(_ sender: UIButton) {
     }
     
@@ -57,5 +66,6 @@ class UIView: UIViewController {
             return Disposables.create()
         }
     }
+    
 }
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YQJ-uw-usU">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -44,16 +44,140 @@
                                 <rect key="frame" x="16" y="109" width="361" height="232"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="22r-qx-Yhv">
+                                <rect key="frame" x="290" y="372" width="99" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="next learn"/>
+                                <connections>
+                                    <action selector="pressSegue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KI2-z0-yVO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="ffh-hy-VPT"/>
                     <connections>
                         <outlet property="counterLabel" destination="erm-mL-eYE" id="IsJ-6F-AQ5"/>
                         <outlet property="image" destination="q9f-VQ-t4g" id="pKe-4B-Nhg"/>
+                        <segue destination="JEM-1W-Cz8" kind="presentation" identifier="nextLearn" id="1JK-Do-aGd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1061.8320610687022" y="3.5211267605633805"/>
+        </scene>
+        <!--Next Learn-->
+        <scene sceneID="p6N-9P-i1z">
+            <objects>
+                <viewController storyboardIdentifier="nextLearn" id="JEM-1W-Cz8" customClass="nextLearn" customModule="practice_RxSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Lms-Re-rsV">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="UWm-vH-81j">
+                                <rect key="frame" x="159" y="148" width="70" height="281"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pR4-Et-XS1">
+                                        <rect key="frame" x="0.0" y="0.0" width="70" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Just2"/>
+                                        <connections>
+                                            <action selector="pressJust2:" destination="JEM-1W-Cz8" eventType="touchUpInside" id="KI6-H4-ekI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2nB-8K-GKy">
+                                        <rect key="frame" x="0.0" y="49.333333333333343" width="70" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="From1"/>
+                                        <connections>
+                                            <action selector="pressFrom1:" destination="JEM-1W-Cz8" eventType="touchUpInside" id="9Dc-G2-iav"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SVW-Ms-81s">
+                                        <rect key="frame" x="0.0" y="98.666666666666657" width="70" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Map1"/>
+                                        <connections>
+                                            <action selector="pressMap1:" destination="JEM-1W-Cz8" eventType="touchUpInside" id="0Aj-xc-S60"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u2A-cb-ckS">
+                                        <rect key="frame" x="0.0" y="148" width="70" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Map2"/>
+                                        <connections>
+                                            <action selector="pressMap2:" destination="JEM-1W-Cz8" eventType="touchUpInside" id="1fL-zx-b9N"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p4u-wA-DXF">
+                                        <rect key="frame" x="0.0" y="197.33333333333331" width="70" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Filter1"/>
+                                        <connections>
+                                            <action selector="pressFilter1:" destination="JEM-1W-Cz8" eventType="touchUpInside" id="BpM-ex-nVw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0jR-rJ-u7D">
+                                        <rect key="frame" x="0.0" y="246.66666666666671" width="70" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Map3"/>
+                                        <connections>
+                                            <action selector="pressMap3:" destination="JEM-1W-Cz8" eventType="touchUpInside" id="gTP-5B-8c1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5TB-MZ-EOh">
+                                <rect key="frame" x="0.0" y="460.66666666666674" width="393" height="268"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="268" id="08v-cp-fya"/>
+                                    <constraint firstAttribute="width" constant="393" id="Ixg-mx-iBI"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jey-Sc-T8q">
+                                <rect key="frame" x="159" y="116" width="70" height="34.333333333333336"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Just1"/>
+                                <connections>
+                                    <action selector="pressJust1:" destination="JEM-1W-Cz8" eventType="touchUpInside" id="dG0-Ji-7MC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2JX-ZS-asX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UWm-vH-81j" firstAttribute="top" secondItem="2JX-ZS-asX" secondAttribute="top" constant="89" id="V5G-re-fNh"/>
+                            <constraint firstItem="5TB-MZ-EOh" firstAttribute="centerX" secondItem="Lms-Re-rsV" secondAttribute="centerX" id="g8V-nv-267"/>
+                            <constraint firstItem="UWm-vH-81j" firstAttribute="leading" secondItem="2JX-ZS-asX" secondAttribute="leading" constant="159" id="i8a-5f-zy7"/>
+                            <constraint firstItem="5TB-MZ-EOh" firstAttribute="centerY" secondItem="Lms-Re-rsV" secondAttribute="centerY" constant="203" id="nag-Em-0T9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="image" destination="5TB-MZ-EOh" id="phR-hN-rMg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lsj-ue-7A3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1924.4274809160304" y="3.5211267605633805"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="IMX-Ce-zsl">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YQJ-uw-usU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lq6-J5-PGz">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="XdA-DV-7n2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jxl-kp-hFz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="135.1145038167939" y="3.5211267605633805"/>
         </scene>

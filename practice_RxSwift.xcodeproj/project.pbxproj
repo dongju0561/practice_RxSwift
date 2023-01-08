@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B6C95CD296AEADE0085404F /* nextLearnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6C95CC296AEADE0085404F /* nextLearnView.swift */; };
 		1BC09458295EDA3B0010D953 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC09457295EDA3B0010D953 /* AppDelegate.swift */; };
 		1BC0945A295EDA3B0010D953 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC09459295EDA3B0010D953 /* SceneDelegate.swift */; };
 		1BC0945C295EDA3B0010D953 /* RxTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC0945B295EDA3B0010D953 /* RxTest.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B6C95CC296AEADE0085404F /* nextLearnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nextLearnView.swift; sourceTree = "<group>"; };
 		1BC09454295EDA3B0010D953 /* practice_RxSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = practice_RxSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BC09457295EDA3B0010D953 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BC09459295EDA3B0010D953 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				1BC09457295EDA3B0010D953 /* AppDelegate.swift */,
 				1BC09459295EDA3B0010D953 /* SceneDelegate.swift */,
 				1BC0946B295EE9990010D953 /* Common.swift */,
+				1B6C95CC296AEADE0085404F /* nextLearnView.swift */,
 				1BC0945B295EDA3B0010D953 /* RxTest.swift */,
 				1BC0945D295EDA3B0010D953 /* Main.storyboard */,
 				1BC09460295EDA3C0010D953 /* Assets.xcassets */,
@@ -214,6 +217,7 @@
 				1BC0946C295EE9990010D953 /* Common.swift in Sources */,
 				1BC0945C295EDA3B0010D953 /* RxTest.swift in Sources */,
 				1BC09458295EDA3B0010D953 /* AppDelegate.swift in Sources */,
+				1B6C95CD296AEADE0085404F /* nextLearnView.swift in Sources */,
 				1BC0945A295EDA3B0010D953 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
