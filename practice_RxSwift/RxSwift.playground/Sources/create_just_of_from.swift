@@ -60,7 +60,34 @@ observableJustIterable.subscribe{// next(["event", "tap", "tick"])
     print($0)
 }
 
-//of():
-let observableOf = Observable.of(oneItem)
+/*
+of()의 타입 Observable<[Int]>
+of() 메소드 같은 경우 인자로 배열을 받든 연속된 값을 입력을 받든 같은 출력값을 가지게 된다.
+*/
+Observable.of([1,2,3]).subscribe(onNext: { array in
+    print(array)
+}).disposed(by: disposeBag)
 
-let observableFrom = Observable.from(oneItem)
+Observable.of(1,2,3).subscribe(onNext: { array in
+    print(array)
+}).disposed(by: disposeBag)
+/* 
+print: 
+1
+2
+3
+*/
+
+/*
+from()의 타입 Observable<Int>이다.
+from() 메소드 같은 경우는 메소드의 인자는 배열만 입력받을 수 있다.
+*/
+Observable.from([1,2,3]).subscribe(onNext: { element in
+    print(element)
+}).disposed(by: disposeBag)
+/* 
+print: 
+1
+2
+3
+*/
