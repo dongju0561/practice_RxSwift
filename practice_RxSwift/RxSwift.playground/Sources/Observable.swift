@@ -45,7 +45,7 @@ let observable5 = Observable<Void>.empty()
 //never observable
 let observable6 = Observable<Any>.never()
 
-//range observable
+//range observable: range()메소드는 start 값부터 count 값까지 1씩 증가하면서 subscribe에 정의된 클로저의 인자에 대입하여 
 let observable7 = Observable<Int>.range(start: 1, count: 10)
 
 observable7.subscribe { i in
