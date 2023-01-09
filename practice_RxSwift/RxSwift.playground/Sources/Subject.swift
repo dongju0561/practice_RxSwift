@@ -51,7 +51,7 @@ let subscriptionll = observable.subscribe(onNext: {
 
 /*
  subjects는 특수한 형태의 observable sequence이다.
- 구독할 수 있고, 동적으로 subject에 요소를 추가할 수 있다.
+ 구독할 수 있고(Observer), 동적으로 subject에 요소를 추가(Observable)할 수 있다.
  */
 
 let subject = PublishSubject<String>()
@@ -63,7 +63,7 @@ let subScriptionPublisher = subject.subscribe{ string in
 subject.onNext("hello world")
 
 /*
- publish subject
+ publish subject: 구독 이전의 이벤트는 처리하지 않고 구독 이후의 이벤트만 처리하는 subject이다.
  */
 
 let subject = PublishSubject<String>()
@@ -74,7 +74,7 @@ let subscriptionOne = subject.subscribe(onNext: {string in // sequence 생성
     print(string)
 })
 
- sequence(subscriptionOne)에서 발생한것
+//sequence(subscriptionOne)에서 발생한것
 subject.on(.next("1"))//emit
 subject.onNext("2")//emit
 
